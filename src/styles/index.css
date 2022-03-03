@@ -1,0 +1,23 @@
+@import '@fontsource/work-sans';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html,
+	body,
+	#root {
+		@apply flex flex-col grow;
+	}
+
+	body {
+		@apply m-0 font-sans antialiased [overflow-wrap:anywhere];
+	}
+
+	*,
+	::before,
+	::after {
+		@apply border-0 border-solid border-current;
+	}
+}

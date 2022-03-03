@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC, useLayoutEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { Index } from './components/index';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App: FC = () => {
+	const location = useLocation();
 
-export default App;
+	useLayoutEffect(() => {
+		document.documentElement.scrollTo(0, 0);
+	}, [location.pathname]);
+
+	return (
+		<Routes>
+			<Route index element={<Index />} />
+		</Routes>
+	);
+};
