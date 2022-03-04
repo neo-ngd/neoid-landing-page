@@ -1,10 +1,23 @@
 import { FC } from 'react';
-import { Link } from 'components/base/Link';
+import { useMeasure, useWindowScroll } from 'react-use';
+import { Page } from 'components/shared/Page';
+import { Banner } from './Banner';
+import { Components } from './Components';
+import { Intros } from './Intros';
+import { JoinUs } from './JoinUs';
 
 export const Index: FC = () => {
+	const { y } = useWindowScroll();
+	const [bannerCallback, { height }] = useMeasure();
+
 	return (
-		<div className="m-4">
-			<Link href="https://www.google.com">Link to Google</Link>
-		</div>
+		<Page headerDarkMode={y < height - 80}>
+			<div ref={ref => ref != null && bannerCallback(ref)}>
+				<Banner />
+			</div>
+			<Intros />
+			<Components />
+			<JoinUs />
+		</Page>
 	);
 };

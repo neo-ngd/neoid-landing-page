@@ -1,4 +1,7 @@
-@import '@fontsource/work-sans';
+@import '@fontsource/work-sans/300.css';
+@import '@fontsource/work-sans/400.css';
+@import '@fontsource/work-sans/500.css';
+@import '@fontsource/work-sans/600.css';
 
 @tailwind base;
 @tailwind components;
@@ -12,12 +15,12 @@
 	}
 
 	body {
-		@apply m-0 font-sans antialiased [overflow-wrap:anywhere];
+		@apply m-0 font-sans antialiased leading-normal [overflow-wrap:anywhere];
 	}
 
 	*,
 	::before,
 	::after {
-		@apply border-0 border-solid border-current;
+		@apply box-border border-0 border-solid border-current;
 	}
 }

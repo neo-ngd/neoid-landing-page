@@ -11,8 +11,7 @@ module.exports = {
 			white: colors.white,
 			gray: '#2f2f2f',
 			gray2: '#f9f9f9',
-			green: '#00af92',
-			green2: '#00e599',
+			green: '#81db36',
 		},
 		fontFamily: {
 			sans: ['Work Sans', ...defaultTheme.fontFamily.sans],

@@ -1,0 +1,11 @@
+{
+	"route": {
+		"about": "About",
+		"user": "User",
+		"developer": "Developer",
+		"components": "Components",
+		"joinUs": "Join Us"
+	},
+	"whitePaper": "White Paper",
+	"demo": "Demo"
+}

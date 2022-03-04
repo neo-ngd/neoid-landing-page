@@ -1,0 +1,9 @@
+{
+	"title": "Available Components",
+	"credentialTemplate": "Smart contract template for credential issuers",
+	"demo": "A demo with an implementation reference",
+	"didDefinition": "NEO DID definition",
+	"issuerLibraries": "Libraries for building up Issuer and Verifier dedicated UI",
+	"trustTemplate": "Smart contract template for the \"Root of Trust\" manager",
+	"walletsLibraries": "Libraries for developing Identity owner wallets"
+}

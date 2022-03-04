@@ -1,0 +1,12 @@
+{
+	"about": "About",
+	"aboutDescr": "Seraph ID is a set of tools that can be used by dApps developers and users to leverage Self-Sovereign identity capabilities. It relies on the W3C standards providing DID and verifiable claims functionalities.",
+	"demo": "Demo",
+	"user": "dApps User",
+	"userDescr": "Self-Sovereign identity allows users to be in control of their own data and decide what to share and to whom. Seraph ID provides a build reference for an user wallet that each one can use to store and manage their credentials.",
+	"installWallet": "Install Wallet",
+	"developer": "dApps Developer",
+	"developerDescr": "Seraph ID is providing libraries and smart contract templates that can be used to enable SSI capabilities on each dApps. dApps developers are also encouraged to get involved in the project and propose improvement on the Seraph ID framework.",
+	"whitePaper": "White Paper",
+	"github": "View Github Project"
+}
