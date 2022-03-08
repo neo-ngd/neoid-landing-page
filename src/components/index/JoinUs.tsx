@@ -10,22 +10,22 @@ export const JoinUs: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 	return (
 		<div
 			id="joinUs"
-			className={twMerge('flex flex-col items-center p-[100px] pb-[120px]', className)}
+			className={twMerge('flex flex-col items-center px-[40px] py-[100px] pb-[120px]', className)}
 			{...props}
 		>
-			<div className="text-[20px] uppercase">{t('community')}</div>
-			<div className="mt-[16px] text-[60px]">{t('joinUs')}</div>
-			<div className="flex mt-[60px] space-x-[60px]">
+			<div className="uppercase">{t('community')}</div>
+			<div className="mt-[16px] text-[46px]">{t('joinUs')}</div>
+			<div className="flex flex-col xl:flex-row mt-[60px] xl:space-x-[60px] space-y-[60px] xl:space-y-0">
 				<div className="flex flex-col items-center">
 					<img src={neoLogo} alt="neo logo" />
-					<div className="mt-[40px] text-[24px]">
+					<div className="mt-[32px]">
 						<span className="font-medium">{t('contact')}</span>
 						<span> contact@neo.org</span>
 					</div>
 				</div>
 				<div className="flex flex-col items-center">
 					<img src={swisscomLogo} alt="swisscom logo" />
-					<div className="mt-[40px] text-[24px]">
+					<div className="mt-[32px]">
 						<span className="font-medium">{t('contact')}</span>
 						<span> blockchain@swisscom.com</span>
 					</div>

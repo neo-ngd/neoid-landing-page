@@ -17,6 +17,9 @@ module.exports = {
 			sans: ['Work Sans', ...defaultTheme.fontFamily.sans],
 			mono: defaultTheme.fontFamily.mono,
 		},
+		screens: {
+			xl: '1280px',
+		},
 	},
 	corePlugins: {
 		preflight: false,

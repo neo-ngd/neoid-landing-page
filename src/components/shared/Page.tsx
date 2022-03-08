@@ -1,5 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import { ComponentProps, FC, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { Drawer } from './Drawer';
 import { Header } from './Header';
 
 interface Props extends ComponentProps<'div'> {
@@ -7,10 +8,13 @@ interface Props extends ComponentProps<'div'> {
 }
 
 export const Page: FC<Props> = ({ headerDarkMode, className, children, ...props }) => {
+	const [drawerVisible, setDrawerVisible] = useState(false);
+
 	return (
 		<div className={twMerge('flex overflow-x-hidden flex-col grow', className)} {...props}>
-			<Header className="shrink-0" darkMode={headerDarkMode} />
+			<Header darkMode={headerDarkMode} onHamburgerClick={() => setDrawerVisible(true)} />
 			<div className="grow shrink-0">{children}</div>
+			<Drawer visible={drawerVisible} onClose={() => setDrawerVisible(false)} />
 		</div>
 	);
 };

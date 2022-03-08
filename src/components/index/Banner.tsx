@@ -2,6 +2,7 @@ import { ComponentProps, FC } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { twMerge } from 'tailwind-merge';
 import fingerprint from 'assets/images/fingerprint-white.svg';
+import { Button } from 'components/base/Button';
 import { Universe } from './Universe';
 
 export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
@@ -10,18 +11,22 @@ export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 	return (
 		<div
 			className={twMerge(
-				`flex relative flex-col justify-center items-center h-[100vh] min-h-[800px] bg-gradient-to-br from-black to-gray`,
+				`flex isolate relative flex-col justify-center items-center h-[100vh] min-h-[600px] bg-gradient-to-br from-black to-gray`,
 				className,
 			)}
 			{...props}
 		>
-			<Universe className="absolute w-full h-full" />
-			<img src={fingerprint} alt="fingerprint" />
-			<div className="mt-[32px] text-[80px] text-white">
+			<Universe className="absolute w-full h-full z-[-1]" />
+			<img
+				className="mt-[60px] xl:mt-[80px] h-[60px] xl:h-auto"
+				src={fingerprint}
+				alt="fingerprint"
+			/>
+			<div className="mt-[32px] text-[46px] xl:text-[60px] text-white">
 				<span className="font-light">NEO</span>
 				<span className="font-medium"> ID</span>
 			</div>
-			<div className="mt-[20px] text-[20px] leading-loose text-white text-center">
+			<div className="px-[40px] mt-[16px] text-[16px] xl:text-[20px] leading-loose text-center text-white">
 				<Trans
 					t={t}
 					i18nKey="description"
@@ -29,6 +34,14 @@ export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 						hl: <span className="text-semibold text-green" />,
 					}}
 				/>
+			</div>
+			<div className="flex xl:hidden flex-col mt-[32px]">
+				<Button type="filled" size="lg" color="green">
+					{t('whitePaper')}
+				</Button>
+				<Button className="mt-[24px]" type="filled" size="lg" color="green">
+					{t('demo')}
+				</Button>
 			</div>
 		</div>
 	);

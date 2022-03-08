@@ -2,10 +2,12 @@ import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { twMerge } from 'tailwind-merge';
 import fingerprint from 'assets/images/fingerprint-black.svg';
+import hamburgerBlack from 'assets/images/hamburger-black.svg';
+import hamburgerWhite from 'assets/images/hamburger-white.svg';
 import { Button } from 'components/base/Button';
 import { Link } from 'components/base/Link';
 
-interface Route {
+export interface Route {
 	name: string;
 	href?: string;
 	to?: string;
@@ -42,16 +44,17 @@ export const ROUTES: Route[] = [
 
 interface Props extends ComponentProps<'div'> {
 	darkMode?: boolean;
+	onHamburgerClick?: () => void;
 }
 
-export const Header: FC<Props> = ({ darkMode, className, ...props }) => {
+export const Header: FC<Props> = ({ darkMode, onHamburgerClick, className, ...props }) => {
 	const { t } = useTranslation('shared_Header');
 
 	const scrollTo = (route: Route) => {
 		if (route.tag != null) {
 			const el = document.querySelector<HTMLElement>(route.tag);
 			if (el != null) {
-				document.documentElement.scrollTo({
+				document.scrollingElement?.scrollTo({
 					top: el.offsetTop - 80,
 					behavior: 'smooth',
 				});
@@ -60,7 +63,7 @@ export const Header: FC<Props> = ({ darkMode, className, ...props }) => {
 	};
 
 	const scrollToTop = () => {
-		document.documentElement.scrollTo({
+		document.scrollingElement?.scrollTo({
 			top: 0,
 			behavior: 'smooth',
 		});
@@ -69,22 +72,29 @@ export const Header: FC<Props> = ({ darkMode, className, ...props }) => {
 	return (
 		<div
 			className={twMerge(
-				`flex fixed top-0 left-0 right-0 z-10 items-center px-[40px] h-[80px] ${
+				`flex fixed top-0 left-0 right-0 z-10 items-center px-[24px] xl:px-[40px] h-[60px] xl:h-[80px] ${
 					darkMode ? 'bg-black' : 'bg-white'
 				} shadow-md transition-all duration-300`,
 				className,
 			)}
 			{...props}
 		>
-			<Link className={`flex ${darkMode ? 'hidden' : ''}`} to="/" onClick={scrollToTop}>
-				<img className="drop-shadow-2xl" src={fingerprint} alt="fingerprint" />
-				<div className="ml-[10px] text-[24px]">
+			<Button className="xl:hidden" onClick={onHamburgerClick}>
+				<img src={darkMode ? hamburgerWhite : hamburgerBlack} alt="hamburger" />
+			</Button>
+			<Link
+				className={`flex ${darkMode ? 'hidden' : ''} ml-[24px] xl:ml-0`}
+				to="/"
+				onClick={scrollToTop}
+			>
+				<img className="h-[24px] xl:h-auto" src={fingerprint} alt="fingerprint" />
+				<div className="ml-[16px] text-[20px]">
 					<span className="font-light">NEO</span>
 					<span className="font-medium"> ID</span>
 				</div>
 			</Link>
 			<div className="grow" />
-			<div className="flex space-x-[40px] items-center">
+			<div className="hidden xl:flex space-x-[40px] items-center">
 				{ROUTES.map(route => (
 					<Link
 						className={`text-[16px] font-medium ${darkMode ? 'text-white' : ''}`}

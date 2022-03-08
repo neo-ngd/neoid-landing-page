@@ -1,4 +1,37 @@
+const CracoLessPlugin = require('craco-less');
+
 module.exports = {
+	plugins: [
+		{
+			plugin: CracoLessPlugin,
+			options: {
+				lessLoaderOptions: {
+					lessOptions: {
+						modifyVars: {
+							// See all theme variables (dark override default):
+							// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+							// https://github.com/ant-design/ant-design/blob/master/components/style/themes/dark.less
+
+							// Prefer modifying more abstract variables (check the impact)
+							// Base scaffolding variables
+							'@font-size-base': '16px',
+							'@link-color': 'invalid',
+							'@link-hover-color': 'invalid',
+							'@link-active-color': 'invalid',
+							'@link-decoration': 'invalid',
+							'@link-hover-decoration': 'invalid',
+							'@link-focus-decoration': 'invalid',
+
+							// Divider
+							'@drawer-header-padding': 0,
+							'@drawer-body-padding': 0,
+						},
+						javascriptEnabled: true,
+					},
+				},
+			},
+		},
+	],
 	webpack: {
 		target: 'node',
 		configure: webpackConfig => {

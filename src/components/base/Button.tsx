@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge';
 interface Props extends Omit<ComponentProps<'button'>, 'type'> {
 	type?: 'filled' | 'outline' | 'plain' | 'unstyled';
 	size?: 'sm' | 'md' | 'lg';
-	color?: 'green' | 'white';
+	color?: 'green' | 'white' | 'gray2';
 }
 
 export const Button = forwardRef<ComponentRef<'button'>, Props>(
@@ -13,7 +13,7 @@ export const Button = forwardRef<ComponentRef<'button'>, Props>(
 		ref,
 	) => {
 		let baseClassName =
-			'inline-flex justify-center items-center font-medium uppercase rounded-full border-[1px] hover:opacity-60 transition-all duration-300 cursor-pointer';
+			'inline-flex justify-center items-center font-medium uppercase rounded-[10px] xl:rounded-full border-[1px] outline-0 hover:opacity-60 transition-all duration-300 cursor-pointer';
 
 		switch (color) {
 			case 'green':
@@ -23,17 +23,20 @@ export const Button = forwardRef<ComponentRef<'button'>, Props>(
 			case 'white':
 				baseClassName += ' text-black bg-white border-black';
 				break;
+			case 'gray2':
+				baseClassName += ' text-black bg-gray2 border-black';
+				break;
 		}
 
 		switch (size) {
 			case 'sm':
-				baseClassName += ' px-[20px] h-[32px] text-[12px]';
+				baseClassName += ' px-[18px] h-[32px] text-[12px]';
 				break;
 			case 'md':
-				baseClassName += ' px-[28px] h-[40px] text-[14px]';
+				baseClassName += ' px-[24px] h-[40px] text-[14px]';
 				break;
 			case 'lg':
-				baseClassName += ' px-[40px] h-[54px] text-[16px]';
+				baseClassName += ' px-[36px] h-[48px] text-[16px]';
 				break;
 		}
 
@@ -49,7 +52,7 @@ export const Button = forwardRef<ComponentRef<'button'>, Props>(
 				break;
 			case 'unstyled':
 				baseClassName +=
-					' px-0 h-auto text-[length:inherit] font-[number:inherit] text-[color:inherit] bg-transparent rounded-none border-0';
+					' px-0 h-auto text-[length:inherit] font-[weight:inherit] text-[color:inherit] bg-transparent bg-none rounded-none border-0';
 				break;
 		}
 
