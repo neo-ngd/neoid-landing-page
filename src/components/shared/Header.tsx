@@ -5,11 +5,14 @@ import { ReactComponent as Fingerprint } from 'assets/inline-svgs/fingerprint.sv
 import { ReactComponent as Hamburger } from 'assets/inline-svgs/hamburger.svg';
 import { Button } from 'components/base/Button';
 import { Link } from 'components/base/Link';
+import { useBreakpointValue } from 'hooks/breakpoints';
+import { BREAKPOINTS } from 'utils/misc';
 
 export interface Route {
 	name: string;
 	href?: string;
 	to?: string;
+	replace?: boolean;
 	tag?: string;
 }
 
@@ -17,29 +20,39 @@ export const ROUTES: Route[] = [
 	{
 		name: 'about',
 		to: '#about',
+		replace: true,
 		tag: '#about',
 	},
 	{
 		name: 'user',
 		to: '#user',
+		replace: true,
 		tag: '#user',
 	},
 	{
 		name: 'developer',
 		to: '#developer',
+		replace: true,
 		tag: '#developer',
 	},
 	{
 		name: 'components',
 		to: '#components',
+		replace: true,
 		tag: '#components',
 	},
 	{
 		name: 'joinUs',
 		to: '#joinUs',
+		replace: true,
 		tag: '#joinUs',
 	},
 ];
+
+export const HEADER_HEGIT = {
+	base: 60,
+	xl: 80,
+};
 
 interface Props extends ComponentProps<'div'> {
 	darkMode?: boolean;
@@ -56,12 +69,14 @@ export const Header: FC<Props> = ({
 }) => {
 	const { t } = useTranslation('shared_Header');
 
+	const headerHeight = useBreakpointValue(HEADER_HEGIT, BREAKPOINTS);
+
 	const scrollTo = (route: Route) => {
 		if (route.tag != null) {
 			const el = document.querySelector<HTMLElement>(route.tag);
 			if (el != null) {
 				document.scrollingElement?.scrollTo({
-					top: el.offsetTop - 80,
+					top: el.offsetTop - headerHeight,
 					behavior: 'smooth',
 				});
 			}
@@ -78,13 +93,15 @@ export const Header: FC<Props> = ({
 	return (
 		<div
 			className={twMerge(
-				`flex fixed top-0 left-0 right-0 z-10 items-center px-[24px] xl:px-[40px] h-[60px] xl:h-[80px] ${
+				`flex fixed top-0 left-0 right-0 z-10 items-center px-[24px] xl:px-[40px] ${
 					darkMode ? '' : 'bg-white shadow-md'
-				} transition-all ${
-					visible ? '' : 'translate-y-[-60px] xl:translate-y-[-80px]'
-				} duration-300`,
+				} transition-all duration-300`,
 				className,
 			)}
+			style={{
+				height: `${headerHeight}px`,
+				transform: visible ? undefined : `translate(0,-${headerHeight}px)`,
+			}}
 			{...props}
 		>
 			<Button className="xl:hidden" onClick={onHamburgerClick}>
@@ -93,6 +110,7 @@ export const Header: FC<Props> = ({
 			<Link
 				className={`flex ${darkMode ? 'hidden' : ''} ml-[24px] xl:ml-0`}
 				to="/"
+				replace
 				onClick={scrollToTop}
 			>
 				<Fingerprint className="w-auto h-[24px] xl:h-[36px]" />
@@ -108,6 +126,7 @@ export const Header: FC<Props> = ({
 						className={`text-[16px] font-medium ${darkMode ? 'text-white' : ''}`}
 						href={route.href}
 						to={route.to}
+						replace={route.replace}
 						key={route.name}
 						onClick={() => scrollTo(route)}
 					>

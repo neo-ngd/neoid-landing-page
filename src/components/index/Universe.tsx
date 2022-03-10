@@ -71,7 +71,7 @@ export const Universe: FC<ComponentProps<'canvas'>> = props => {
 			canvas.height = height;
 
 			if (stars.length === 0) {
-				const starsCount = Math.round(width * height * 0.0002);
+				const starsCount = Math.round(width * height * 0.0004);
 				for (let i = 0; i < starsCount; i++) {
 					stars.push(Star.random(width, height));
 				}

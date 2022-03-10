@@ -4,7 +4,9 @@ import { useTranslation } from 'react-i18next';
 import close from 'assets/images/close.svg';
 import { Button } from 'components/base/Button';
 import { Link } from 'components/base/Link';
-import { Route, ROUTES } from './Header';
+import { useBreakpointValue } from 'hooks/breakpoints';
+import { BREAKPOINTS } from 'utils/misc';
+import { HEADER_HEGIT, Route, ROUTES } from './Header';
 
 interface Props extends ComponentProps<typeof AntdDrawer> {
 	onClose?: () => void;
@@ -13,12 +15,14 @@ interface Props extends ComponentProps<typeof AntdDrawer> {
 export const Drawer: FC<Props> = ({ onClose, ...props }) => {
 	const { t } = useTranslation('shared_Header');
 
+	const headerHeight = useBreakpointValue(HEADER_HEGIT, BREAKPOINTS);
+
 	const scrollTo = (route: Route) => {
 		if (route.tag != null) {
 			const el = document.querySelector<HTMLElement>(route.tag);
 			if (el != null) {
 				document.scrollingElement?.scrollTo({
-					top: el.offsetTop - 60,
+					top: el.offsetTop - headerHeight,
 					behavior: 'smooth',
 				});
 				onClose?.();
@@ -38,6 +42,7 @@ export const Drawer: FC<Props> = ({ onClose, ...props }) => {
 							className="text-[16px] font-medium"
 							href={route.href}
 							to={route.to}
+							replace={route.replace}
 							key={route.name}
 							onClick={() => scrollTo(route)}
 						>
