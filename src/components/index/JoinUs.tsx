@@ -1,8 +1,8 @@
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { twMerge } from 'tailwind-merge';
-import neoLogo from 'assets/images/neo-logo.svg';
-import swisscomLogo from 'assets/images/swisscom-logo.svg';
+import neoLogo from 'assets/images/neo-logo.png';
+import swisscomLogo from 'assets/images/swisscom-logo.png';
 
 export const JoinUs: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 	const { t } = useTranslation('index_JoinUs');

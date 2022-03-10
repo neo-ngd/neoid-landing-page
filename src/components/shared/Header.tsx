@@ -1,9 +1,8 @@
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { twMerge } from 'tailwind-merge';
-import fingerprint from 'assets/images/fingerprint-black.svg';
-import hamburgerBlack from 'assets/images/hamburger-black.svg';
-import hamburgerWhite from 'assets/images/hamburger-white.svg';
+import { ReactComponent as Fingerprint } from 'assets/inline-svgs/fingerprint.svg';
+import { ReactComponent as Hamburger } from 'assets/inline-svgs/hamburger.svg';
 import { Button } from 'components/base/Button';
 import { Link } from 'components/base/Link';
 
@@ -80,14 +79,14 @@ export const Header: FC<Props> = ({ darkMode, onHamburgerClick, className, ...pr
 			{...props}
 		>
 			<Button className="xl:hidden" onClick={onHamburgerClick}>
-				<img src={darkMode ? hamburgerWhite : hamburgerBlack} alt="hamburger" />
+				<Hamburger className={`${darkMode ? 'text-white' : 'text-black'}`} />
 			</Button>
 			<Link
 				className={`flex ${darkMode ? 'hidden' : ''} ml-[24px] xl:ml-0`}
 				to="/"
 				onClick={scrollToTop}
 			>
-				<img className="h-[24px] xl:h-auto" src={fingerprint} alt="fingerprint" />
+				<Fingerprint className="w-auto h-[24px] xl:h-[36px]" />
 				<div className="ml-[16px] text-[20px]">
 					<span className="font-light">NEO</span>
 					<span className="font-medium"> ID</span>
