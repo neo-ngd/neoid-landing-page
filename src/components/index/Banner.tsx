@@ -27,7 +27,7 @@ export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 					t={t}
 					i18nKey="description"
 					components={{
-						hl: <span className="text-semibold text-green" />,
+						hl: <span className="font-semibold text-green" />,
 					}}
 				/>
 			</div>
