@@ -43,10 +43,17 @@ export const ROUTES: Route[] = [
 
 interface Props extends ComponentProps<'div'> {
 	darkMode?: boolean;
+	visible?: boolean;
 	onHamburgerClick?: () => void;
 }
 
-export const Header: FC<Props> = ({ darkMode, onHamburgerClick, className, ...props }) => {
+export const Header: FC<Props> = ({
+	darkMode,
+	visible = true,
+	onHamburgerClick,
+	className,
+	...props
+}) => {
 	const { t } = useTranslation('shared_Header');
 
 	const scrollTo = (route: Route) => {
@@ -72,8 +79,10 @@ export const Header: FC<Props> = ({ darkMode, onHamburgerClick, className, ...pr
 		<div
 			className={twMerge(
 				`flex fixed top-0 left-0 right-0 z-10 items-center px-[24px] xl:px-[40px] h-[60px] xl:h-[80px] ${
-					darkMode ? 'bg-black' : 'bg-white'
-				} shadow-md transition-all duration-300`,
+					darkMode ? '' : 'bg-white shadow-md'
+				} transition-all ${
+					visible ? '' : 'translate-y-[-60px] xl:translate-y-[-80px]'
+				} duration-300`,
 				className,
 			)}
 			{...props}

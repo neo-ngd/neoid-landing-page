@@ -5,14 +5,25 @@ import { Header } from './Header';
 
 interface Props extends ComponentProps<'div'> {
 	headerDarkMode?: boolean;
+	headerVisible?: boolean;
 }
 
-export const Page: FC<Props> = ({ headerDarkMode, className, children, ...props }) => {
+export const Page: FC<Props> = ({
+	headerDarkMode,
+	headerVisible,
+	className,
+	children,
+	...props
+}) => {
 	const [drawerVisible, setDrawerVisible] = useState(false);
 
 	return (
 		<div className={twMerge('flex overflow-x-hidden flex-col grow', className)} {...props}>
-			<Header darkMode={headerDarkMode} onHamburgerClick={() => setDrawerVisible(true)} />
+			<Header
+				darkMode={headerDarkMode}
+				visible={headerVisible}
+				onHamburgerClick={() => setDrawerVisible(true)}
+			/>
 			<div className="grow shrink-0">{children}</div>
 			<Drawer visible={drawerVisible} onClose={() => setDrawerVisible(false)} />
 		</div>

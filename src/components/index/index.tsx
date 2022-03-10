@@ -11,7 +11,7 @@ export const Index: FC = () => {
 	const [bannerCallback, { height }] = useMeasure();
 
 	return (
-		<Page headerDarkMode={y === 0 || y < height - 80}>
+		<Page headerDarkMode={y === 0 || y < height - 80} headerVisible={y < 100 || y >= height - 80}>
 			<div ref={ref => ref != null && bannerCallback(ref)}>
 				<Banner />
 			</div>
