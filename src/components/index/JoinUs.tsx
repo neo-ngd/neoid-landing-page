@@ -1,6 +1,6 @@
+import { twMerge } from '@liuqiang1357/tailwind-merge';
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { twMerge } from 'tailwind-merge';
 import neoLogo from 'assets/images/neo-logo.png';
 import swisscomLogo from 'assets/images/swisscom-logo.png';
 

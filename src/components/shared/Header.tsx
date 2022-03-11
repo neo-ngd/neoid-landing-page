@@ -1,6 +1,6 @@
+import { twMerge } from '@liuqiang1357/tailwind-merge';
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { twMerge } from 'tailwind-merge';
 import { ReactComponent as Fingerprint } from 'assets/inline-svgs/fingerprint.svg';
 import { ReactComponent as Hamburger } from 'assets/inline-svgs/hamburger.svg';
 import { Button } from 'components/base/Button';

@@ -1,5 +1,5 @@
+import { twMerge } from '@liuqiang1357/tailwind-merge';
 import { ComponentProps, FC, useState } from 'react';
-import { twMerge } from 'tailwind-merge';
 import { Drawer } from './Drawer';
 import { Header } from './Header';
 
