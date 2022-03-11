@@ -32,7 +32,7 @@ export const Drawer: FC<Props> = ({ onClose, ...props }) => {
 
 	return (
 		<AntdDrawer width="280px" closeIcon={null} placement="left" onClose={onClose} {...props}>
-			<div className="flex flex-col">
+			<div className="flex flex-col pb-[48px]">
 				<Button className="mt-[24px] mr-[24px] self-end" onClick={onClose}>
 					<img src={close} alt="close" />
 				</Button>

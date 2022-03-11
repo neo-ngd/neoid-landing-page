@@ -45,7 +45,7 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 						size="md"
 						color="white"
 					>
-						{t('demo')}
+						{t('installWallet')}
 						<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 					</Button>
 					<Button className="hidden xl:flex mt-[32px]" type="filled" size="lg" color="green">

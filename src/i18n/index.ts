@@ -4,14 +4,14 @@ import { merge } from 'lodash-es';
 import { initReactI18next } from 'react-i18next';
 
 const resources: Resource = {};
-const files = require.context('./locales', true, /^(?!.*\/_).*\.json$/);
+const context = require.context('./locales', true, /^(?!.*\/_).*\.json$/);
 
-for (const file of files.keys()) {
-	const parts = file.split('/');
+for (const path of context.keys()) {
+	const parts = path.split('/');
 	const namespace = parts.pop()?.replace(/\.\w+$/, '');
 	const language = parts.pop();
 	if (namespace != null && language != null) {
-		merge(resources, { [language]: { [namespace]: files(file) } });
+		merge(resources, { [language]: { [namespace]: context(path) } });
 	}
 }
 

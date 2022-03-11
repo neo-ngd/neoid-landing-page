@@ -11,7 +11,7 @@ export function useBreakpoint<C extends Config = Config, B extends keyof C = key
 		return Object.keys(config) as B[];
 	}, [config]);
 
-	const mediaQueries = useMemo(() => {
+	const queries = useMemo(() => {
 		if (typeof window === 'undefined') {
 			return [];
 		}
@@ -24,25 +24,23 @@ export function useBreakpoint<C extends Config = Config, B extends keyof C = key
 	}, [config, breakpoints]);
 
 	const getCurrentBreakpoint = useCallback(() => {
-		return (
-			findLast(mediaQueries, mediaQuery => mediaQuery.list.matches)?.breakpoint ?? defaultBreakpoint
-		);
-	}, [mediaQueries, defaultBreakpoint]);
+		return findLast(queries, query => query.list.matches)?.breakpoint ?? defaultBreakpoint;
+	}, [queries, defaultBreakpoint]);
 
 	const [currentBreakpoint, setCurrentBreakpoint] = useState(() => {
 		return getCurrentBreakpoint();
 	});
 
 	useEffect(() => {
-		const unsubscribers = mediaQueries.map(mediaQuery => {
+		const disposers = queries.map(query => {
 			const listener = () => {
 				setCurrentBreakpoint(getCurrentBreakpoint());
 			};
-			mediaQuery.list.addEventListener('change', listener);
-			return () => mediaQuery.list.removeEventListener('change', listener);
+			query.list.addEventListener('change', listener);
+			return () => query.list.removeEventListener('change', listener);
 		});
-		return () => unsubscribers.forEach(unsubscriber => unsubscriber());
-	}, [mediaQueries, getCurrentBreakpoint]);
+		return () => disposers.forEach(disposer => disposer());
+	}, [queries, getCurrentBreakpoint]);
 
 	return currentBreakpoint;
 }

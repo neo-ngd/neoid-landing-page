@@ -1,5 +1,5 @@
 import { FC, useLayoutEffect } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { Index } from './components/index';
 
 export const App: FC = () => {
@@ -12,6 +12,7 @@ export const App: FC = () => {
 	return (
 		<Routes>
 			<Route index element={<Index />} />
+			<Route path="*" element={<Navigate to="/" />} />
 		</Routes>
 	);
 };
