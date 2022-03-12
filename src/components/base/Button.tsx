@@ -9,7 +9,15 @@ interface Props extends Omit<ComponentProps<'button'>, 'type'> {
 
 export const Button = forwardRef<ComponentRef<'button'>, Props>(
 	(
-		{ type = 'unstyled', size = 'md', color = 'green', disabled, className, children, ...props },
+		{
+			type = 'unstyled',
+			size = 'md',
+			color = 'green',
+			disabled = false,
+			className,
+			children,
+			...props
+		},
 		ref,
 	) => {
 		let baseClassName =

@@ -22,7 +22,7 @@ module.exports = {
 							'@link-hover-decoration': 'invalid',
 							'@link-focus-decoration': 'invalid',
 
-							// Divider
+							// Drawer
 							'@drawer-header-padding': 0,
 							'@drawer-body-padding': 0,
 						},

@@ -58,7 +58,7 @@ export const Universe: FC<ComponentProps<'canvas'>> = props => {
 
 	useLayoutEffect(() => {
 		const canvas = canvasRef.current;
-		if (canvas == null) {
+		if (!canvas) {
 			return;
 		}
 
@@ -81,7 +81,7 @@ export const Universe: FC<ComponentProps<'canvas'>> = props => {
 				stars.forEach(star => star.update(time - lastTime, width, height));
 				lastTime = time;
 				const context = canvas.getContext('2d');
-				if (context != null) {
+				if (context) {
 					context.clearRect(0, 0, width, height);
 					stars.forEach(star => star.draw(context));
 				}

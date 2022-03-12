@@ -1,8 +1,8 @@
+import { useBreakpointValue } from '@liuqiang1357/react-breakpoints';
 import { FC } from 'react';
 import { useMeasure, useWindowScroll } from 'react-use';
 import { HEADER_HEGIT } from 'components/shared/Header';
 import { Page } from 'components/shared/Page';
-import { useBreakpointValue } from 'hooks/breakpoints';
 import { BREAKPOINTS } from 'utils/misc';
 import { Banner } from './Banner';
 import { Components } from './Components';
@@ -20,7 +20,7 @@ export const Index: FC = () => {
 			headerDarkMode={y === 0 || y < height - headerHeight}
 			headerVisible={y < 100 || y >= height - headerHeight}
 		>
-			<div ref={ref => ref != null && bannerCallback(ref)}>
+			<div ref={ref => ref && bannerCallback(ref)}>
 				<Banner />
 			</div>
 			<Intros />

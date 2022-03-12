@@ -7,11 +7,12 @@
 		"build": "craco build",
 		"test": "craco test",
 		"lint": "eslint . --fix",
-		"format": "prettier --write ."
+		"format": "prettier . --write"
 	},
 	"dependencies": {
 		"@craco/craco": "^6.4.3",
 		"@fontsource/work-sans": "^4.5.5",
+		"@liuqiang1357/react-breakpoints": "1.0.4",
 		"@liuqiang1357/tailwind-merge": "^1.2.0",
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^12.0.0",
@@ -30,7 +31,6 @@
 		"eslint": "^8.10.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.25.4",
-		"eslint-plugin-jest": "^26.1.1",
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-react-hooks": "^4.3.0",
 		"i18next": "^21.6.13",

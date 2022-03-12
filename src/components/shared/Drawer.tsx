@@ -1,10 +1,10 @@
+import { useBreakpointValue } from '@liuqiang1357/react-breakpoints';
 import { Drawer as AntdDrawer } from 'antd';
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import close from 'assets/images/close.svg';
 import { Button } from 'components/base/Button';
 import { Link } from 'components/base/Link';
-import { useBreakpointValue } from 'hooks/breakpoints';
 import { BREAKPOINTS } from 'utils/misc';
 import { HEADER_HEGIT, Route, ROUTES } from './Header';
 
@@ -20,7 +20,7 @@ export const Drawer: FC<Props> = ({ onClose, ...props }) => {
 	const scrollTo = (route: Route) => {
 		if (route.tag != null) {
 			const el = document.querySelector<HTMLElement>(route.tag);
-			if (el != null) {
+			if (el) {
 				document.scrollingElement?.scrollTo({
 					top: el.offsetTop - headerHeight,
 					behavior: 'smooth',

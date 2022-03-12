@@ -1433,6 +1433,13 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@liuqiang1357/react-breakpoints@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@liuqiang1357/react-breakpoints/-/react-breakpoints-1.0.4.tgz#55b8b34a5e16c541f4d2a3b0198e3103ee4a3d22"
+  integrity sha512-pd4Q6DSIcmVirLJZ/oFNo68DTVF2s79CFIEJFPdBG1BoHXXSMlTsMw4qzZ6DoYAzWpJXlZ19SArgLUmOpkBIbQ==
+  dependencies:
+    lodash-es "^4.17.21"
+
 "@liuqiang1357/tailwind-merge@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@liuqiang1357/tailwind-merge/-/tailwind-merge-1.2.0.tgz#f3b304c0e2d03aa53b35113a3c9be1869838fe23"
@@ -2122,7 +2129,7 @@
     semver "^7.3.5"
     tsutils "^3.21.0"
 
-"@typescript-eslint/utils@5.13.0", "@typescript-eslint/utils@^5.10.0", "@typescript-eslint/utils@^5.10.2":
+"@typescript-eslint/utils@5.13.0", "@typescript-eslint/utils@^5.10.2":
   version "5.13.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-5.13.0.tgz#2328feca700eb02837298339a2e49c46b41bd0af"
   integrity sha512-+9oHlPWYNl6AwwoEt5TQryEHwiKRVjz7Vk6kaBeD3/kwHE5YqTGHtm/JZY8Bo9ITOeKutFaXnBlMgSATMJALUQ==
@@ -4102,13 +4109,6 @@ eslint-plugin-jest@^25.3.0:
   integrity sha512-PWLUEXeeF7C9QGKqvdSbzLOiLTx+bno7/HC9eefePfEb257QFHg7ye3dh80AZVkaa/RQsBB1Q/ORQvg2X7F0NQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "^5.0.0"
-
-eslint-plugin-jest@^26.1.1:
-  version "26.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.1.1.tgz#7176dd745ef8bca3070263f62cdf112f2dfc9aa1"
-  integrity sha512-HRKOuPi5ADhza4ZBK5ufyNXy28bXXkib87w+pQqdvBhSTsamndh6sIAKPAUl8y0/n9jSWBdTPslrwtKWqkp8dA==
-  dependencies:
-    "@typescript-eslint/utils" "^5.10.0"
 
 eslint-plugin-jsx-a11y@^6.5.1:
   version "6.5.1"

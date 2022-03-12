@@ -1,3 +1,4 @@
+import { useBreakpointValue } from '@liuqiang1357/react-breakpoints';
 import { twMerge } from '@liuqiang1357/tailwind-merge';
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -5,7 +6,6 @@ import { ReactComponent as Fingerprint } from 'assets/inline-svgs/fingerprint.sv
 import { ReactComponent as Hamburger } from 'assets/inline-svgs/hamburger.svg';
 import { Button } from 'components/base/Button';
 import { Link } from 'components/base/Link';
-import { useBreakpointValue } from 'hooks/breakpoints';
 import { BREAKPOINTS } from 'utils/misc';
 
 export interface Route {
@@ -61,7 +61,7 @@ interface Props extends ComponentProps<'div'> {
 }
 
 export const Header: FC<Props> = ({
-	darkMode,
+	darkMode = false,
 	visible = true,
 	onHamburgerClick,
 	className,
@@ -74,7 +74,7 @@ export const Header: FC<Props> = ({
 	const scrollTo = (route: Route) => {
 		if (route.tag != null) {
 			const el = document.querySelector<HTMLElement>(route.tag);
-			if (el != null) {
+			if (el) {
 				document.scrollingElement?.scrollTo({
 					top: el.offsetTop - headerHeight,
 					behavior: 'smooth',
