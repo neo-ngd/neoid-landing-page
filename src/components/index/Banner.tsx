@@ -16,7 +16,7 @@ export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 			)}
 			{...props}
 		>
-			<Universe className="absolute w-full h-full z-[-1]" />
+			<Universe className="absolute w-full h-full -z-10" />
 			<Fingerprint className="w-auto h-[60px] xl:h-[90px] text-gray2" />
 			<div className="mt-[32px] text-[46px] xl:text-[60px] text-white">
 				<span className="font-light">NEO</span>
