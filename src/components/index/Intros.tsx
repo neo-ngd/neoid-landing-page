@@ -20,11 +20,18 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 						type="filled"
 						size="md"
 						color="gray2"
+						onClick={() => window.open('https://github.com/neo-ngd/seraph-id-demo')}
 					>
 						{t('demo')}
 						<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 					</Button>
-					<Button className="hidden xl:flex mt-[32px]" type="filled" size="lg" color="green">
+					<Button
+						className="hidden xl:flex mt-[32px]"
+						type="filled"
+						size="lg"
+						color="green"
+						onClick={() => window.open('https://github.com/neo-ngd/seraph-id-demo')}
+					>
 						{t('demo')}
 					</Button>
 				</div>
@@ -44,11 +51,26 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 						type="filled"
 						size="md"
 						color="white"
+						onClick={() =>
+							window.open(
+								'https://chrome.google.com/webstore/detail/neoline/cphhlgmgameodnhkjdmkpanlelnlohao',
+							)
+						}
 					>
 						{t('installWallet')}
 						<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 					</Button>
-					<Button className="hidden xl:flex mt-[32px]" type="filled" size="lg" color="green">
+					<Button
+						className="hidden xl:flex mt-[32px]"
+						type="filled"
+						size="lg"
+						color="green"
+						onClick={() =>
+							window.open(
+								'https://chrome.google.com/webstore/detail/neoline/cphhlgmgameodnhkjdmkpanlelnlohao',
+							)
+						}
+					>
 						{t('installWallet')}
 					</Button>
 				</div>
@@ -69,11 +91,18 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 							type="filled"
 							size="md"
 							color="gray2"
+							onClick={() => window.open('/white-paper.pdf')}
 						>
 							{t('whitePaper')}
 							<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 						</Button>
-						<Button className="hidden xl:flex" type="filled" size="lg" color="white">
+						<Button
+							className="hidden xl:flex"
+							type="filled"
+							size="lg"
+							color="white"
+							onClick={() => window.open('/white-paper.pdf')}
+						>
 							{t('whitePaper')}
 						</Button>
 						<Button
@@ -81,11 +110,18 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 							type="filled"
 							size="md"
 							color="gray2"
+							onClick={() => window.open('https://github.com/neo-ngd/seraph-id-smart-contracts')}
 						>
 							{t('github')}
 							<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 						</Button>
-						<Button className="hidden xl:flex ml-[24px]" type="filled" size="lg" color="green">
+						<Button
+							className="hidden xl:flex ml-[24px]"
+							type="filled"
+							size="lg"
+							color="green"
+							onClick={() => window.open('https://github.com/neo-ngd/seraph-id-smart-contracts')}
+						>
 							{t('github')}
 						</Button>
 					</div>

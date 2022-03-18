@@ -133,10 +133,18 @@ export const Header: FC<Props> = ({
 						{t(`route.${route.name}`)}
 					</Link>
 				))}
-				<Button type="filled" color={darkMode ? 'green' : 'white'}>
+				<Button
+					type="filled"
+					color={darkMode ? 'green' : 'white'}
+					onClick={() => window.open('/white-paper.pdf')}
+				>
 					{t('whitePaper')}
 				</Button>
-				<Button type="filled" color={darkMode ? 'green' : 'white'}>
+				<Button
+					type="filled"
+					color={darkMode ? 'green' : 'white'}
+					onClick={() => window.open('https://github.com/neo-ngd/seraph-id-demo')}
+				>
 					{t('demo')}
 				</Button>
 			</div>

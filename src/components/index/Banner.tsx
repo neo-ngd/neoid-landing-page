@@ -32,10 +32,21 @@ export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 				/>
 			</div>
 			<div className="flex xl:hidden flex-col mt-[32px]">
-				<Button type="filled" size="lg" color="green">
+				<Button
+					type="filled"
+					size="lg"
+					color="green"
+					onClick={() => window.open('/white-paper.pdf')}
+				>
 					{t('whitePaper')}
 				</Button>
-				<Button className="mt-[24px]" type="filled" size="lg" color="green">
+				<Button
+					className="mt-[24px]"
+					type="filled"
+					size="lg"
+					color="green"
+					onClick={() => window.open('https://github.com/neo-ngd/seraph-id-demo')}
+				>
 					{t('demo')}
 				</Button>
 			</div>
