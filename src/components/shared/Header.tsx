@@ -93,9 +93,9 @@ export const Header: FC<Props> = ({
 	return (
 		<div
 			className={twMerge(
-				`flex fixed top-0 left-0 right-0 z-10 items-center px-[24px] xl:px-[40px] ${
+				`fixed top-0 left-0 right-0 z-10 flex items-center px-[24px] transition-all duration-300 xl:px-[40px] ${
 					darkMode ? '' : 'bg-white shadow-md'
-				} transition-all duration-300`,
+				} `,
 				className,
 			)}
 			style={{
@@ -108,19 +108,19 @@ export const Header: FC<Props> = ({
 				<Hamburger className={`${darkMode ? 'text-white' : 'text-black'}`} />
 			</Button>
 			<Link
-				className={`flex ${darkMode ? 'hidden' : ''} ml-[24px] xl:ml-0`}
+				className={`ml-[24px] flex xl:ml-0 ${darkMode ? 'hidden' : ''}`}
 				to="/"
 				replace
 				onClick={scrollToTop}
 			>
-				<Fingerprint className="w-auto h-[24px] xl:h-[36px]" />
+				<Fingerprint className="h-[24px] w-auto xl:h-[36px]" />
 				<div className="ml-[16px] text-[20px]">
 					<span className="font-light">NEO</span>
 					<span className="font-medium"> ID</span>
 				</div>
 			</Link>
 			<div className="grow" />
-			<div className="hidden xl:flex space-x-[40px] items-center">
+			<div className="hidden items-center space-x-[40px] xl:flex">
 				{ROUTES.map(route => (
 					<Link
 						key={route.name}

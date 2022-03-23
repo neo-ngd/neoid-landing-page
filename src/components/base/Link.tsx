@@ -11,7 +11,7 @@ type Props = (ComponentPropsWithoutRef<'a'> | ComponentPropsWithoutRef<typeof Ro
 
 export const Link = forwardRef<Ref, Props>(({ className, type = 'primary', ...props }, ref) => {
 	let baseClassName =
-		/*tw:*/ 'inline-flex items-center text-[color:inherit] uppercase no-underline transition-all duration-300';
+		/*tw:*/ 'inline-flex items-center uppercase text-[color:inherit] no-underline transition-all duration-300';
 
 	switch (type) {
 		case 'primary':

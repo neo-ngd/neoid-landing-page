@@ -11,11 +11,11 @@
 html,
 body,
 #root {
-	@apply flex flex-col grow;
+	@apply flex grow flex-col;
 }
 
 body {
-	@apply m-0 font-sans antialiased leading-normal [overflow-wrap:anywhere];
+	@apply m-0 font-sans leading-normal antialiased [overflow-wrap:anywhere];
 }
 
 *,

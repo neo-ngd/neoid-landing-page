@@ -21,30 +21,30 @@ export const Button = forwardRef<ComponentRef<'button'>, Props>(
 		ref,
 	) => {
 		let baseClassName =
-			/*tw:*/ 'inline-flex justify-center items-center font-medium uppercase rounded-[10px] xl:rounded-full border-[1px] outline-0 hover:opacity-60 transition-all duration-300 cursor-pointer';
+			/*tw:*/ 'inline-flex cursor-pointer items-center justify-center rounded-[10px] border-[1px] font-medium uppercase outline-0 transition-all duration-300 hover:opacity-60 xl:rounded-full';
 
 		switch (color) {
 			case 'green':
 				baseClassName +=
-					/*tw:*/ ' text-white bg-gradient-to-r from-[#75be39] to-[#bae047] border-transparent';
+					/*tw:*/ ' border-transparent bg-gradient-to-r from-[#75be39] to-[#bae047] text-white';
 				break;
 			case 'white':
-				baseClassName += /*tw:*/ ' text-black bg-white border-black';
+				baseClassName += /*tw:*/ ' border-black bg-white text-black';
 				break;
 			case 'gray2':
-				baseClassName += /*tw:*/ ' text-black bg-gray2 border-black';
+				baseClassName += /*tw:*/ ' border-black bg-gray2 text-black';
 				break;
 		}
 
 		switch (size) {
 			case 'sm':
-				baseClassName += /*tw:*/ ' px-[18px] h-[32px] text-[12px]';
+				baseClassName += /*tw:*/ ' h-[32px] px-[18px] text-[12px]';
 				break;
 			case 'md':
-				baseClassName += /*tw:*/ ' px-[24px] h-[40px] text-[14px]';
+				baseClassName += /*tw:*/ ' h-[40px] px-[24px] text-[14px]';
 				break;
 			case 'lg':
-				baseClassName += /*tw:*/ ' px-[36px] h-[48px] text-[16px]';
+				baseClassName += /*tw:*/ ' h-[48px] px-[36px] text-[16px]';
 				break;
 		}
 
@@ -53,18 +53,18 @@ export const Button = forwardRef<ComponentRef<'button'>, Props>(
 				baseClassName += /*tw:*/ '';
 				break;
 			case 'outline':
-				baseClassName += /*tw:*/ ' text-[color:inherit] bg-transparent';
+				baseClassName += /*tw:*/ ' bg-transparent text-[color:inherit]';
 				break;
 			case 'plain':
-				baseClassName += /*tw:*/ ' text-[color:inherit] bg-transparent border-transparent';
+				baseClassName += /*tw:*/ ' border-transparent bg-transparent text-[color:inherit]';
 				break;
 			case 'unstyled':
 				baseClassName +=
-					/*tw:*/ ' px-0 h-auto text-[length:inherit] font-[number:inherit] text-[color:inherit] bg-transparent bg-none rounded-none border-0';
+					/*tw:*/ ' h-auto rounded-none border-0 bg-transparent bg-none px-0 text-[length:inherit] font-[number:inherit] text-[color:inherit]';
 				break;
 		}
 
-		const disabledClassName = /*tw:*/ 'opacity-30 hover:opacity-30 cursor-not-allowed ';
+		const disabledClassName = /*tw:*/ 'cursor-not-allowed opacity-30 hover:opacity-30 ';
 
 		return (
 			<button

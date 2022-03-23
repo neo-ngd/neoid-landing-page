@@ -36,7 +36,7 @@ export const Drawer: FC<Props> = ({ onClose, ...props }) => {
 				<Button className="mt-[24px] mr-[24px] self-end" onClick={onClose}>
 					<img src={close} alt="close" />
 				</Button>
-				<div className="flex flex-col mt-[48px] ml-[48px] space-y-[32px]">
+				<div className="mt-[48px] ml-[48px] flex flex-col space-y-[32px]">
 					{ROUTES.map(route => (
 						<Link
 							key={route.name}

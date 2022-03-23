@@ -18,13 +18,13 @@ export const Page: FC<Props> = ({
 	const [drawerVisible, setDrawerVisible] = useState(false);
 
 	return (
-		<div className={twMerge('flex overflow-x-hidden flex-col grow', className)} {...props}>
+		<div className={twMerge('flex grow flex-col overflow-x-hidden', className)} {...props}>
 			<Header
 				darkMode={headerDarkMode}
 				visible={headerVisible}
 				onHamburgerClick={() => setDrawerVisible(true)}
 			/>
-			<div className="grow shrink-0">{children}</div>
+			<div className="shrink-0 grow">{children}</div>
 			<Drawer visible={drawerVisible} onClose={() => setDrawerVisible(false)} />
 		</div>
 	);

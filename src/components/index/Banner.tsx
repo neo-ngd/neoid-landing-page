@@ -11,18 +11,18 @@ export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 	return (
 		<div
 			className={twMerge(
-				`flex isolate relative flex-col justify-center items-center h-[100vh] min-h-[600px] bg-gradient-to-br from-black to-gray`,
+				`relative isolate flex h-[100vh] min-h-[600px] flex-col items-center justify-center bg-gradient-to-br from-black to-gray`,
 				className,
 			)}
 			{...props}
 		>
-			<Universe className="absolute w-full h-full -z-10" />
-			<Fingerprint className="w-auto h-[60px] xl:h-[90px] text-gray2" />
-			<div className="mt-[32px] text-[46px] xl:text-[60px] text-white">
+			<Universe className="absolute -z-10 h-full w-full" />
+			<Fingerprint className="h-[60px] w-auto text-gray2 xl:h-[90px]" />
+			<div className="mt-[32px] text-[46px] text-white xl:text-[60px]">
 				<span className="font-light">NEO</span>
 				<span className="font-medium"> ID</span>
 			</div>
-			<div className="px-[40px] mt-[16px] text-[16px] xl:text-[20px] leading-loose text-center text-white">
+			<div className="mt-[16px] px-[40px] text-center text-[16px] leading-loose text-white xl:text-[20px]">
 				<Trans
 					t={t}
 					i18nKey="description"
@@ -31,7 +31,7 @@ export const Banner: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 					}}
 				/>
 			</div>
-			<div className="flex xl:hidden flex-col mt-[32px]">
+			<div className="mt-[32px] flex flex-col xl:hidden">
 				<Button
 					type="filled"
 					size="lg"

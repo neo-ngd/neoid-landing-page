@@ -14,38 +14,38 @@ export const Components: FC<ComponentProps<'div'>> = ({ className, ...props }) =
 	return (
 		<div
 			id="components"
-			className={twMerge('flex flex-col items-center px-[40px] py-[100px] bg-gray2', className)}
+			className={twMerge('flex flex-col items-center bg-gray2 px-[40px] py-[100px]', className)}
 			{...props}
 		>
-			<div className="text-[46px] text-center">{t('title')}</div>
-			<div className="grid xl:grid-cols-3 gap-x-[100px] gap-y-[60px] xl:px-[60px] mt-[60px]">
-				<div className="flex xl:flex-col items-center">
+			<div className="text-center text-[46px]">{t('title')}</div>
+			<div className="mt-[60px] grid gap-x-[100px] gap-y-[60px] xl:grid-cols-3 xl:px-[60px]">
+				<div className="flex items-center xl:flex-col">
 					<img className="w-[60px] xl:w-auto" src={credentialTemplate} alt="credential template" />
-					<div className="xl:mt-[16px] ml-[8px] xl:ml-0 xl:text-center">
+					<div className="ml-[8px] xl:mt-[16px] xl:ml-0 xl:text-center">
 						{t('credentialTemplate')}
 					</div>
 				</div>
-				<div className="flex xl:flex-col items-center">
+				<div className="flex items-center xl:flex-col">
 					<img className="w-[60px] xl:w-auto" src={issuerLibraries} alt="issuer libraries" />
-					<div className="xl:mt-[16px] ml-[8px] xl:ml-0 xl:text-center">{t('issuerLibraries')}</div>
+					<div className="ml-[8px] xl:mt-[16px] xl:ml-0 xl:text-center">{t('issuerLibraries')}</div>
 				</div>
-				<div className="flex xl:flex-col items-center">
+				<div className="flex items-center xl:flex-col">
 					<img className="w-[60px] xl:w-auto" src={walletsLibraries} alt="wallets libraries" />
-					<div className="xl:mt-[16px] ml-[8px] xl:ml-0 xl:text-center">
+					<div className="ml-[8px] xl:mt-[16px] xl:ml-0 xl:text-center">
 						{t('walletsLibraries')}
 					</div>
 				</div>
-				<div className="flex xl:flex-col items-center">
+				<div className="flex items-center xl:flex-col">
 					<img className="w-[60px] xl:w-auto" src={trustTemplate} alt="trust template" />
-					<div className="xl:mt-[16px] ml-[8px] xl:ml-0 xl:text-center">{t('trustTemplate')}</div>
+					<div className="ml-[8px] xl:mt-[16px] xl:ml-0 xl:text-center">{t('trustTemplate')}</div>
 				</div>
-				<div className="flex xl:flex-col items-center">
+				<div className="flex items-center xl:flex-col">
 					<img className="w-[60px] xl:w-auto" src={didDefinition} alt="did definition" />
-					<div className="xl:mt-[16px] ml-[8px] xl:ml-0 xl:text-center">{t('didDefinition')}</div>
+					<div className="ml-[8px] xl:mt-[16px] xl:ml-0 xl:text-center">{t('didDefinition')}</div>
 				</div>
-				<div className="flex xl:flex-col items-center">
+				<div className="flex items-center xl:flex-col">
 					<img className="w-[60px] xl:w-auto" src={demo} alt="demo" />
-					<div className="xl:mt-[16px] ml-[8px] xl:ml-0 xl:text-center">{t('demo')}</div>
+					<div className="ml-[8px] xl:mt-[16px] xl:ml-0 xl:text-center">{t('demo')}</div>
 				</div>
 			</div>
 		</div>

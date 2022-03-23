@@ -11,12 +11,12 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 
 	return (
 		<div {...props}>
-			<div id="about" className="flex flex-col xl:flex-row items-center xl:pl-[128px]">
-				<div className="flex flex-col items-end px-[32px] xl:px-0 pt-[60px] xl:pt-0 text-right">
+			<div id="about" className="flex flex-col items-center xl:flex-row xl:pl-[128px]">
+				<div className="flex flex-col items-end px-[32px] pt-[60px] text-right xl:px-0 xl:pt-0">
 					<div className="text-[46px]">{t('about')}</div>
 					<div className="mt-[32px]">{t('aboutDescr')}</div>
 					<Button
-						className="xl:hidden justify-between mt-[32px] w-full max-w-[400px] border-0"
+						className="mt-[32px] w-full max-w-[400px] justify-between border-0 xl:hidden"
 						type="filled"
 						size="md"
 						color="gray2"
@@ -26,7 +26,7 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 						<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 					</Button>
 					<Button
-						className="hidden xl:flex mt-[32px]"
+						className="mt-[32px] hidden xl:flex"
 						type="filled"
 						size="lg"
 						color="green"
@@ -36,18 +36,18 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 					</Button>
 				</div>
 				<img
-					className="self-end xl:self-auto xl:ml-[80px] w-full xl:w-auto max-w-[400px] xl:max-w-none xl:h-[400px]"
+					className="w-full max-w-[400px] self-end xl:ml-[80px] xl:h-[400px] xl:w-auto xl:max-w-none xl:self-auto"
 					src={about}
 					alt="about"
 				/>
 			</div>
 
-			<div id="user" className="flex flex-col xl:flex-row items-center xl:pr-[128px] bg-gray2">
-				<div className="xl:order-1 px-[32px] xl:px-0 pt-[60px] xl:pt-0 xl:ml-[80px]">
+			<div id="user" className="flex flex-col items-center bg-gray2 xl:flex-row xl:pr-[128px]">
+				<div className="px-[32px] pt-[60px] xl:order-1 xl:ml-[80px] xl:px-0 xl:pt-0">
 					<div className="text-[46px]">{t('user')}</div>
 					<div className="mt-[32px]">{t('userDescr')}</div>
 					<Button
-						className="xl:hidden justify-between mt-[32px] w-full max-w-[400px] border-0"
+						className="mt-[32px] w-full max-w-[400px] justify-between border-0 xl:hidden"
 						type="filled"
 						size="md"
 						color="white"
@@ -61,7 +61,7 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 						<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 					</Button>
 					<Button
-						className="hidden xl:flex mt-[32px]"
+						className="mt-[32px] hidden xl:flex"
 						type="filled"
 						size="lg"
 						color="green"
@@ -75,19 +75,19 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 					</Button>
 				</div>
 				<img
-					className="self-start xl:self-auto w-full xl:w-auto max-w-[400px] xl:max-w-none xl:h-[400px]"
+					className="w-full max-w-[400px] self-start xl:h-[400px] xl:w-auto xl:max-w-none xl:self-auto"
 					src={user}
 					alt="dapps user"
 				/>
 			</div>
 
-			<div id="developer" className="flex flex-col xl:flex-row items-center xl:pl-[128px]">
-				<div className="flex flex-col items-end px-[32px] xl:px-0 pt-[60px] xl:pt-0 text-right">
+			<div id="developer" className="flex flex-col items-center xl:flex-row xl:pl-[128px]">
+				<div className="flex flex-col items-end px-[32px] pt-[60px] text-right xl:px-0 xl:pt-0">
 					<div className="text-[46px]">{t('developer')}</div>
 					<div className="mt-[32px]">{t('developerDescr')}</div>
-					<div className="flex flex-col xl:flex-row items-end xl:items-stretch self-stretch xl:self-auto mt-[32px]">
+					<div className="mt-[32px] flex flex-col items-end self-stretch xl:flex-row xl:items-stretch xl:self-auto">
 						<Button
-							className="xl:hidden justify-between w-full max-w-[400px] border-0"
+							className="w-full max-w-[400px] justify-between border-0 xl:hidden"
 							type="filled"
 							size="md"
 							color="gray2"
@@ -106,7 +106,7 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 							{t('whitePaper')}
 						</Button>
 						<Button
-							className="xl:hidden justify-between mt-[32px] w-full max-w-[400px] border-0"
+							className="mt-[32px] w-full max-w-[400px] justify-between border-0 xl:hidden"
 							type="filled"
 							size="md"
 							color="gray2"
@@ -116,7 +116,7 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 							<img className="ml-[24px]" src={chevronRight} alt="chevron right" />
 						</Button>
 						<Button
-							className="hidden xl:flex ml-[24px]"
+							className="ml-[24px] hidden xl:flex"
 							type="filled"
 							size="lg"
 							color="green"
@@ -127,7 +127,7 @@ export const Intros: FC<ComponentProps<'div'>> = props => {
 					</div>
 				</div>
 				<img
-					className="self-end xl:self-auto xl:ml-[80px] w-full xl:w-auto max-w-[400px] xl:max-w-none xl:h-[400px]"
+					className="w-full max-w-[400px] self-end xl:ml-[80px] xl:h-[400px] xl:w-auto xl:max-w-none xl:self-auto"
 					src={developer}
 					alt="dapps developer"
 				/>

@@ -15,7 +15,7 @@ export const JoinUs: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 		>
 			<div className="uppercase">{t('community')}</div>
 			<div className="mt-[16px] text-[46px]">{t('joinUs')}</div>
-			<div className="flex flex-col xl:flex-row mt-[60px] xl:space-x-[60px] space-y-[60px] xl:space-y-0">
+			<div className="mt-[60px] flex flex-col space-y-[60px] xl:flex-row xl:space-x-[60px] xl:space-y-0">
 				<div className="flex flex-col items-center">
 					<img src={neoLogo} alt="neo logo" />
 					<div className="mt-[32px]">
