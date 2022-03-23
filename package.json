@@ -13,7 +13,6 @@
 		"@craco/craco": "^6.4.3",
 		"@fontsource/work-sans": "^4.5.5",
 		"@liuqiang1357/react-breakpoints": "1.0.4",
-		"@liuqiang1357/tailwind-merge": "^1.2.0",
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^12.0.0",
 		"@testing-library/user-event": "^13.2.1",
@@ -44,6 +43,7 @@
 		"react-router-dom": "^6.2.2",
 		"react-scripts": "5.0.0",
 		"react-use": "^17.3.2",
+		"tailwind-merge": "^1.2.1",
 		"tailwindcss": "^3.0.23",
 		"typescript": "~4.5.4",
 		"web-vitals": "^2.1.0"

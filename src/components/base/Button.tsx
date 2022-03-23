@@ -1,4 +1,4 @@
-import { twMerge } from '@liuqiang1357/tailwind-merge';
+import { twMerge } from 'tailwind-merge';
 import { ComponentProps, ComponentRef, forwardRef } from 'react';
 
 interface Props extends Omit<ComponentProps<'button'>, 'type'> {

@@ -1,4 +1,4 @@
-import { twMerge } from '@liuqiang1357/tailwind-merge';
+import { twMerge } from 'tailwind-merge';
 import { ComponentPropsWithoutRef, ComponentRef } from 'react';
 import { forwardRef } from 'react';
 import { Link as RouterLink } from 'react-router-dom';

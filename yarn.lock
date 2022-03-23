@@ -1440,13 +1440,6 @@
   dependencies:
     lodash-es "^4.17.21"
 
-"@liuqiang1357/tailwind-merge@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@liuqiang1357/tailwind-merge/-/tailwind-merge-1.2.0.tgz#f3b304c0e2d03aa53b35113a3c9be1869838fe23"
-  integrity sha512-c2JHv9iNTkGEVzrM8erwFJNPJG986iPK3rRqiOL7dD1cSX+A4Sx1JUESoLByUZOpvxkMSeZQO6c3tmmFPvTXSA==
-  dependencies:
-    hashlru "^2.3.0"
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -8897,6 +8890,13 @@ symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
+
+tailwind-merge@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.2.1.tgz#a9a10f7ac54cb79cfa14268f1fecbb0248e08acc"
+  integrity sha512-kWfy/u91XoE408Kb42HQd1krdiZjw2sbSWjE1C/lXXXsbK+6dhTpnd37DHrwNP6ofKj5/HKXlY/jTjPYgPxSsw==
+  dependencies:
+    hashlru "^2.3.0"
 
 tailwindcss@^3.0.2, tailwindcss@^3.0.23:
   version "3.0.23"

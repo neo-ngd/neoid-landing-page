@@ -1,5 +1,5 @@
 import { useBreakpointValue } from '@liuqiang1357/react-breakpoints';
-import { twMerge } from '@liuqiang1357/tailwind-merge';
+import { twMerge } from 'tailwind-merge';
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as Fingerprint } from 'assets/inline-svgs/fingerprint.svg';
