@@ -1,7 +1,7 @@
 import { useBreakpointValue } from '@liuqiang1357/react-breakpoints';
-import { twMerge } from 'tailwind-merge';
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { twMerge } from 'tailwind-merge';
 import { ReactComponent as Fingerprint } from 'assets/inline-svgs/fingerprint.svg';
 import { ReactComponent as Hamburger } from 'assets/inline-svgs/hamburger.svg';
 import { Button } from 'components/base/Button';
@@ -61,10 +61,10 @@ interface Props extends ComponentProps<'div'> {
 }
 
 export const Header: FC<Props> = ({
+	className,
 	darkMode = false,
 	visible = true,
 	onHamburgerClick,
-	className,
 	...props
 }) => {
 	const { t } = useTranslation('shared_Header');
@@ -123,11 +123,11 @@ export const Header: FC<Props> = ({
 			<div className="hidden xl:flex space-x-[40px] items-center">
 				{ROUTES.map(route => (
 					<Link
+						key={route.name}
 						className={`text-[16px] font-medium ${darkMode ? 'text-white' : ''}`}
 						href={route.href}
 						to={route.to}
 						replace={route.replace}
-						key={route.name}
 						onClick={() => scrollTo(route)}
 					>
 						{t(`route.${route.name}`)}

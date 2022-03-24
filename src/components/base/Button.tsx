@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge';
 import { ComponentProps, ComponentRef, forwardRef } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface Props extends Omit<ComponentProps<'button'>, 'type'> {
 	type?: 'filled' | 'outline' | 'plain' | 'unstyled';
@@ -10,11 +10,11 @@ interface Props extends Omit<ComponentProps<'button'>, 'type'> {
 export const Button = forwardRef<ComponentRef<'button'>, Props>(
 	(
 		{
+			className,
 			type = 'unstyled',
 			size = 'md',
 			color = 'green',
 			disabled = false,
-			className,
 			children,
 			...props
 		},

@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge';
 import { ComponentProps, FC, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { Drawer } from './Drawer';
 import { Header } from './Header';
 
@@ -9,9 +9,9 @@ interface Props extends ComponentProps<'div'> {
 }
 
 export const Page: FC<Props> = ({
+	className,
 	headerDarkMode,
 	headerVisible,
-	className,
 	children,
 	...props
 }) => {

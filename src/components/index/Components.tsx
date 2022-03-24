@@ -1,6 +1,6 @@
-import { twMerge } from 'tailwind-merge';
 import { ComponentProps, FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { twMerge } from 'tailwind-merge';
 import credentialTemplate from 'assets/images/components/credential-template.svg';
 import demo from 'assets/images/components/demo.svg';
 import didDefinition from 'assets/images/components/did-definition.svg';

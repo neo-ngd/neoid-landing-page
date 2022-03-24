@@ -98,5 +98,5 @@ export const Universe: FC<ComponentProps<'canvas'>> = props => {
 		};
 	}, []);
 
-	return <canvas {...props} ref={canvasRef} />;
+	return <canvas ref={canvasRef} {...props} />;
 };

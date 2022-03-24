@@ -1,7 +1,7 @@
-import { twMerge } from 'tailwind-merge';
 import { ComponentPropsWithoutRef, ComponentRef } from 'react';
 import { forwardRef } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
 type Ref = ComponentRef<'a'> | ComponentRef<typeof RouterLink>;
 
@@ -9,7 +9,7 @@ type Props = (ComponentPropsWithoutRef<'a'> | ComponentPropsWithoutRef<typeof Ro
 	type?: 'primary' | 'secondary';
 };
 
-export const Link = forwardRef<Ref, Props>(({ type = 'primary', className, ...props }, ref) => {
+export const Link = forwardRef<Ref, Props>(({ className, type = 'primary', ...props }, ref) => {
 	let baseClassName =
 		/*tw:*/ 'inline-flex items-center text-[color:inherit] uppercase no-underline transition-all duration-300';
 

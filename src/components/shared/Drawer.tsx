@@ -39,11 +39,11 @@ export const Drawer: FC<Props> = ({ onClose, ...props }) => {
 				<div className="flex flex-col mt-[48px] ml-[48px] space-y-[32px]">
 					{ROUTES.map(route => (
 						<Link
+							key={route.name}
 							className="text-[16px] font-medium"
 							href={route.href}
 							to={route.to}
 							replace={route.replace}
-							key={route.name}
 							onClick={() => scrollTo(route)}
 						>
 							{t(`route.${route.name}`)}
