@@ -20,14 +20,14 @@ export const JoinUs: FC<ComponentProps<'div'>> = ({ className, ...props }) => {
 					<img src={neoLogo} alt="neo logo" />
 					<div className="mt-[32px]">
 						<span className="font-medium">{t('contact')}</span>
-						<span> contact@neo.org</span>
+						<span className="ml-[8px]">contact@neo.org</span>
 					</div>
 				</div>
 				<div className="flex flex-col items-center">
 					<img src={swisscomLogo} alt="swisscom logo" />
 					<div className="mt-[32px]">
 						<span className="font-medium">{t('contact')}</span>
-						<span> blockchain@swisscom.com</span>
+						<span className="ml-[8px]">blockchain@swisscom.com</span>
 					</div>
 				</div>
 			</div>

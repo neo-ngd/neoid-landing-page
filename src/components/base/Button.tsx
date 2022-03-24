@@ -21,7 +21,7 @@ export const Button = forwardRef<ComponentRef<'button'>, Props>(
 		ref,
 	) => {
 		let baseClassName =
-			/*tw:*/ 'inline-flex cursor-pointer items-center justify-center rounded-[10px] border-[1px] font-medium uppercase outline-0 transition-all duration-300 hover:opacity-60 xl:rounded-full';
+			/*tw:*/ 'inline-flex cursor-pointer items-center justify-center rounded-[10px] border font-medium uppercase outline-0 transition-all duration-300 hover:opacity-60 xl:rounded-full';
 
 		switch (color) {
 			case 'green':
