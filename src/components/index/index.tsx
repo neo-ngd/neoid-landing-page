@@ -10,22 +10,22 @@ import { Intros } from './Intros';
 import { JoinUs } from './JoinUs';
 
 export const Index: FC = () => {
-	const { y } = useWindowScroll();
-	const [bannerCallback, { height }] = useMeasure();
+  const { y } = useWindowScroll();
+  const [bannerCallback, { height }] = useMeasure();
 
-	const headerHeight = useBreakpointValue(HEADER_HEGIT, BREAKPOINTS);
+  const headerHeight = useBreakpointValue(HEADER_HEGIT, BREAKPOINTS);
 
-	return (
-		<Page
-			headerDarkMode={y === 0 || y < height - headerHeight}
-			headerVisible={y < 100 || y >= height - headerHeight}
-		>
-			<div ref={ref => ref && bannerCallback(ref)}>
-				<Banner />
-			</div>
-			<Intros />
-			<Components />
-			<JoinUs />
-		</Page>
-	);
+  return (
+    <Page
+      headerDarkMode={y === 0 || y < height - headerHeight}
+      headerVisible={y < 100 || y >= height - headerHeight}
+    >
+      <div ref={ref => ref && bannerCallback(ref)}>
+        <Banner />
+      </div>
+      <Intros />
+      <Components />
+      <JoinUs />
+    </Page>
+  );
 };

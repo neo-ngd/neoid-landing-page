@@ -1,9 +1,9 @@
 {
-	"route": {
-		"about": "About",
-		"user": "User",
-		"developer": "Developer",
-		"components": "Components",
-		"joinUs": "Join Us"
-	}
+  "route": {
+    "about": "About",
+    "user": "User",
+    "developer": "Developer",
+    "components": "Components",
+    "joinUs": "Join Us"
+  }
 }

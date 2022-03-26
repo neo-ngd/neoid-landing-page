@@ -1,5 +1,5 @@
 {
-	"description": "<p>A Self-Sovereign identity framework built on the <hl>NEO blockchain</hl>.</p><p>Enable your dApps to support decentralized identity system.</p>",
-	"whitePaper": "White Paper",
-	"demo": "Demo"
+  "description": "<p>A Self-Sovereign identity framework built on the <hl>NEO blockchain</hl>.</p><p>Enable your dApps to support decentralized identity system.</p>",
+  "whitePaper": "White Paper",
+  "demo": "Demo"
 }
