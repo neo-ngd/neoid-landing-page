@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const foldersUnderSrc = fs
-  .readdirSync('src', { withFileTypes: true })
+  .readdirSync('./src', { withFileTypes: true })
   .filter(dirent => dirent.isDirectory())
   .map(dirent => dirent.name);
 
@@ -30,7 +30,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts?(x)'],
+      files: ['*.{ts,tsx}'],
       extends: ['plugin:@typescript-eslint/recommended'],
       parserOptions: {
         project: './tsconfig.json',
