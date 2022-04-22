@@ -64,7 +64,7 @@ export const Button = forwardRef<ComponentRef<'button'>, Props>(
         break;
     }
 
-    const disabledClassName = /*tw:*/ 'cursor-not-allowed opacity-30 hover:opacity-30 ';
+    const disabledClassName = /*tw:*/ 'cursor-not-allowed opacity-30 hover:opacity-30';
 
     return (
       <button

@@ -1,5 +1,5 @@
 import { useBreakpointValue } from '@liuqiang1357/react-breakpoints';
-import { ComponentProps, FC } from 'react';
+import { ComponentProps, CSSProperties, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { twMerge } from 'tailwind-merge';
 import { ReactComponent as Fingerprint } from 'assets/inline-svgs/fingerprint.svg';
@@ -93,15 +93,12 @@ export const Header: FC<Props> = ({
   return (
     <div
       className={twMerge(
-        `fixed top-0 left-0 right-0 z-10 flex items-center px-[24px] transition-all duration-300 xl:px-[40px] ${
+        `fixed left-0 right-0 z-10 flex h-[var(--header-height)] items-center px-[24px] transition-all duration-300 xl:px-[40px] ${
           darkMode ? '' : 'bg-white shadow-md'
-        } `,
+        } ${visible ? '' : '-translate-y-full'}`,
         className,
       )}
-      style={{
-        height: `${headerHeight}px`,
-        transform: visible ? undefined : `translate(0,-${headerHeight}px)`,
-      }}
+      style={{ '--header-height': `${headerHeight}px` } as CSSProperties}
       {...props}
     >
       <Button className="xl:hidden" onClick={onHamburgerClick}>

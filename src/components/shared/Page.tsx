@@ -18,7 +18,7 @@ export const Page: FC<Props> = ({
   const [drawerVisible, setDrawerVisible] = useState(false);
 
   return (
-    <div className={twMerge('flex grow flex-col overflow-x-hidden', className)} {...props}>
+    <div className={twMerge('flex grow flex-col', className)} {...props}>
       <Header
         darkMode={headerDarkMode}
         visible={headerVisible}
